@@ -1,5 +1,6 @@
 package test.java.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import test.java.pages.BookingPage;
@@ -26,6 +27,7 @@ public class DeleteBookingRecordTest extends BaseTest {
     @Test
     public void deleteBookingRecordTest() {
         bookingPage.clickDelete();
+        Assert.assertEquals(bookingPage.getBookingsGridRecordsNumber(), 0, "The number of records in the grid is not 0, the record was not deleted properly");
     }
 
 }
