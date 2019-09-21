@@ -1,0 +1,8 @@
+.idea/
+*.iml
+
+META-INF/
+target/
+
+out/
+ErrorScreenShot/
